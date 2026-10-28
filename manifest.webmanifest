@@ -1,0 +1,3 @@
+{
+ "name":"Healthy Weight - Theo dõi sức khỏe", "short_name":"Healthy Weight", "description":"Quản lý cân nặng, BMI, năng lượng và thói quen sức khỏe", "start_url":"./", "scope":"./", "display":"standalone", "background_color":"#f4f8f7", "theme_color":"#146b62", "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
