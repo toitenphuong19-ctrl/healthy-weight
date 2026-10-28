@@ -27,3 +27,12 @@ Website sức khỏe cá nhân sử dụng miễn phí, hỗ trợ cài lên mà
 Dữ liệu được lưu bằng localStorage riêng ở trình duyệt hiện tại, không tự đồng bộ giữa thiết bị. Hãy xuất JSON thường xuyên để sao lưu. Đừng nhập dữ liệu sức khỏe nhạy cảm trên thiết bị dùng chung. BMI và kcal là số liệu tham khảo, không thay thế tư vấn y tế.
 
 **Giao diện mẫu:** thêm `?demo=1` vào địa chỉ website để xem với dữ liệu minh họa, dữ liệu minh họa không tự lưu. Để nhập dữ liệu thật, mở trang không có `?demo=1`.
+
+
+## Bản 2.0 — xem trước gói thành viên
+- Thêm thẻ **Gói thành viên** trong menu, so sánh Free / Plus 29.000đ.
+- Chọn mô phỏng **29.000đ/tháng (tự gia hạn)** hoặc **29.000đ/30 ngày (không gia hạn)**.
+- **KHÔNG có thanh toán thật, đăng nhập, đồng bộ dữ liệu hoặc cấp quyền Plus.** Các tính năng AI và phân tích Plus chưa được triển khai.
+- Dữ liệu bản 1.0 vẫn giữ nguyên key lưu trữ trong trình duyệt. Trước khi nâng cấp nên xuất bản sao lưu JSON.
+- Cập nhật GitHub Pages: giải nén ZIP và tải các file lên repository `healthy-weight`, ghi đè tên file cũ, commit. Không đăng tải ZIP trực tiếp.
+- Nếu thiết bị vẫn thấy phiên bản cũ do bộ nhớ đệm PWA, đóng mở lại hoặc làm mới website sau khi GitHub Pages triển khai.
