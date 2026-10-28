@@ -1,5 +1,10 @@
-const CACHE_NAME='healthy-weight-v2-membership';
-const URLS=['./','./index.html','./manifest.webmanifest','./icon.svg'];
+const CACHE_NAME='healthy-weight-v2-1-auth-r1';
+const URLS=['./','./index.html','./manifest.webmanifest','./icon.svg','./config.js','./auth-sync.js'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(URLS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
-self.addEventListener('fetch',event=>{if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;event.respondWith(fetch(event.request).then(response=>{if(response.ok){const clone=response.clone();caches.open(CACHE_NAME).then(cache=>cache.put(event.request,clone))}return response}).catch(()=>caches.match(event.request).then(cached=>cached||caches.match('./index.html'))))});
+self.addEventListener('fetch',event=>{
+ if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;
+ event.respondWith(fetch(event.request).then(response=>{
+  if(response.ok){const clone=response.clone();caches.open(CACHE_NAME).then(cache=>cache.put(event.request,clone))}return response;
+ }).catch(()=>caches.match(event.request).then(cached=>cached||caches.match('./index.html'))));
+});
